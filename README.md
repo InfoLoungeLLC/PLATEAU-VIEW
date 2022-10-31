@@ -23,18 +23,18 @@
 
 #### 手順
 
-##### TerriaMapのクローン
+##### TerriaMapのクローン(TerriaMapはProject-PLATEAUのものをclone)
 
 ```bash
 git clone git@github.com:Project-PLATEAU/PLATEAU-VIEW.git TerriaMap
 cd TerriaMap
 ```
 
-##### TerriaJsのクローン
+##### TerriaJsのクローン(Forkしたものをclone)
 
 ```bash
 mkdir packages && cd packages
-git clone git@github.com:Project-PLATEAU/terriajs.git terriajs
+git clone git@github.com:InfoLoungeLLC/terriajs.git terriajs
 cd ../../
 ```
 
