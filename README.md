@@ -27,7 +27,7 @@
 ```bash
 mkdir packages && cd packages
 git clone git@github.com:InfoLoungeLLC/terriajs.git terriajs
-cd ../../
+cd ..
 ```
 
 #####  nodejs依存モジュールのインストール
@@ -93,7 +93,6 @@ yarn stop
 
 ```text
 # ~/.aws/config
-
 [profile terria]
 aws_access_key_id=YOUR_ACCESS_KEY
 aws_secret_access_key=YOUR_SECRET_ACCESS_KEY
@@ -138,7 +137,6 @@ cd ../../
     "awsEc2ImageId": "<AWS EC2 AMI ID UBUNTU>",
     "awsKeyName": "<AWS EC2 KEY PAIR NAME>",
 ```
-
 各項目の内容は次のとおりです。
 | 項目名 | 内容 |
 | :-- | :-- |
@@ -148,7 +146,6 @@ cd ../../
 | awsEc2InstanceType | EC2のインスタンスタイプ |
 | awsEc2ImageId | EC2のAMIのID （Ubuntu 18.04）|
 | awsKeyName | EC2のキーペア|
-
 ```json
 //変更例
  "config": {
@@ -160,27 +157,19 @@ cd ../../
     "awsEc2ImageId": "ami-00bc9b7f0e98dc134",
     "awsKeyName": "my-great-key-pair",
 ```
-
 ##### TerriaMap/deploy/aws/stack.json の編集
-
 `TerriaMap/deploy/aws/stack.json` の `Parameters.HostedZoneName.Default`と`SSLCertificateId`を編集します。
-
 各項目の内容は次のとおりです。
 | 項目名 | 内容 |
 | :-- | :-- |
 | Parameters.HostedZoneName.Default | Route53のHosted Zone |
 | SSLCertificateId | AWS SSL CertificateのARN |
-
-
 ##### nodejs依存モジュールのインストール
-
 ```bash
 git config url."https://github.com/".insteadOf git://github.com/
 yarn
 ```
-
 ##### インフラ構築とデプロイ
-
 ```bash
 export NODE_OPTIONS=--max_old_space_size=4096
 yarn deploy-without-reinstall
