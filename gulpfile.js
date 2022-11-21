@@ -337,7 +337,7 @@ function checkForDuplicateCesium() {
                     '  rm -rf node_modules/terriajs/node_modules/terriajs-cesium\n' +
                     'Also consider running:\n' +
                     '  yarn gulp sync-terriajs-dependencies\n' +
-                    'to prevent this problem from recurring the next time you `npm install`.';
+                    'to prevent this problem from recurring the next time you `npm install`.');
         throw new PluginError('checkForDuplicateCesium', 'You have two copies of Cesium.', { showStack: false });
     }
 }
