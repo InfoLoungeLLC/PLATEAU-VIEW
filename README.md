@@ -54,5 +54,5 @@ yarn stop
   -  `git://github.com/`で書かれていたいくつかのパッケージがインストールできなかった
     - gitconfigを書き換えた
     ```bash
-    git config url."https://github.com/".insteadOf git://github.com/
+    git config url."https://".insteadOf git://
     ```
