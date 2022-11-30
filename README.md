@@ -52,7 +52,7 @@ yarn stop
 ##### 動かす際に発生したエラーと解決方法。
 - `yarn install`できなかった。
   -  `git://github.com/`で書かれていたいくつかのパッケージがインストールできなかった
-    - gitconfigを書き換えた
+    - gitconfigを書き換えた(-globalオプションをつけないとうまくいかないケースもありました。)
     ```bash
     git config url."https://".insteadOf git://
     ```
