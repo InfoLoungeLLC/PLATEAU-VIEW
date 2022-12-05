@@ -6,6 +6,8 @@
 #### 前提と事前準備
 - Node.js v16.0 以降
 - yarn v1.22.0 以降
+- ※新しすぎるとyarn install失敗したケースがありました。
+  - node@16.15.1, yarn@1.22.18ではうまくいきました。
 #### 手順
 ##### TerriaJs(InfoLoungeLLC)をpackagesにクローン
 
@@ -52,7 +54,7 @@ yarn stop
 ##### 動かす際に発生したエラーと解決方法。
 - `yarn install`できなかった。
   -  `git://github.com/`で書かれていたいくつかのパッケージがインストールできなかった
-    - gitconfigを書き換えた(-globalオプションをつけないとうまくいかないケースもありました。)
+    - gitconfigを書き換えた(--globalオプションはつけないとうまくいかないケースがあり、つけています。)
     ```bash
-    git config url."https://".insteadOf git://
+    git config --global url."https://".insteadOf git://
     ```
